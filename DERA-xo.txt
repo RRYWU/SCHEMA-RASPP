@@ -1,0 +1,2 @@
+# Crossover file for lactamases
+31 57 92 123 174 196

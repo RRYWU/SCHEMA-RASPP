@@ -1,0 +1,2 @@
+# No minimum fragment length specified; using L=4.
+# No bin width specified; using bin width=1.0.

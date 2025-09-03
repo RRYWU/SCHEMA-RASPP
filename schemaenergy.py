@@ -163,6 +163,11 @@ def main(args):
 	crossovers = schema.readCrossoverFile(file(arg_dict[ARG_CROSSOVER_FILE], 'r'))
 	fragments = schema.getFragments(crossovers, parents[0])
 
+	for i, (start, end) in enumerate(fragments):
+		frag_seq = parents[0][start:end]   # slice the first parent sequence
+		print "Fragment %d length: %d" % (i+1, len(frag_seq))
+		print "Fragment %d sequence: %s" % (i+1, frag_seq)
+
 	# Get the contacts
 	pdb_contacts = schema.readContactFile(file(arg_dict[ARG_CONTACT_FILE], 'r'))
 	contacts = schema.getSCHEMAContactsWithCrossovers(pdb_contacts, parents, crossovers)
